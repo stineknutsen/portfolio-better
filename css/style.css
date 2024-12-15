@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+body {
+  padding: 1rem;
+  background-color: #d7e3fc;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #2d2d2d;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1,
+h2,
+h3,
+li,
+a {
+  font-family: "Lato", sans-serif;
+}
+
+p {
+  font-family: "Playfair Display", serif;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-weight: bold;
+}
+
+a {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.welcome {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: #edf2fb;
+  background: radial-gradient(circle, #edf2fb 0%, #abc4ff 100%);
+  background-size: 200% 200%;
+  animation: gradient-move 10s infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.project-cards {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem 1rem;
+}
+
+.card {
+  background-color: #edf2fb;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+  justify-content: space-between;
+}
+
+.card-info {
+  flex-grow: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #e2eafc;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.card-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.card p {
+  text-align: left;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+li {
+  background-color: #abc4ff;
+  background: linear-gradient(to right, #abc4ff 0%, #edf2fb 100%);
+  outline: solid 1px #2d2d2d;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+li:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #d7e3fc;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+/* Themes */
+
+.hidden {
+  display: none;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+body.dark-theme {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+header.dark-theme {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+
+a.dark-theme {
+  color: #e2e8f0;
+}
+
+.welcome.dark-theme {
+  background: #1e293b;
+  background: radial-gradient(circle, #1e293b 0%, #334155 100%);
+  background-size: 200% 200%;
+  animation: gradient-move 10s infinite;
+}
+
+.card.dark-theme {
+  background-color: #334155;
+}
+
+.card.dark-theme h2 {
+  color: #e2e8f0;
+}
+
+li.dark-theme {
+  background-color: #334155;
+  background: linear-gradient(to right, #334155 0%, #1e293b 100%);
+  color: #e2e8f0;
+  outline: solid 1px #e2e8f0;
+}
+
+/*  Theme Toggle Icons */
+#icon-sun {
+  display: inline-block;
+}
+
+#icon-moon {
+  display: none;
+}
+
+body.dark-theme #icon-sun {
+  display: none;
+}
+
+body.dark-theme #icon-moon {
+  display: inline-block;
+}
